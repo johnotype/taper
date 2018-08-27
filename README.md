@@ -11,15 +11,15 @@ Prototyping tool for a board game prototype designed as an intro project to the 
 
 ## Setup
 The setup can be changed by editing config.lua. The current interesting parameters are:
-- Number of players
-- Size of the board
-- Size of the game area
-- Seeding of the game area (pawns, traps, points)
-- Sword clock
-- Turn order
+- [ ] Number of players
+- [x] Size of the board
+- [ ] Size of the goal area
+- [ ] Seeding of the game area (pawns, traps, points)
+- [ ] Sword clock
+- [ ] Turn order
 
 Running the application will consume these configuration parameters and generate a board.
-*Note: there are some limits on the maximum sizes for the pieces due to graphics limitations. This could of course be improved upon.*
+**Note: there are some limits on the maximum sizes for the pieces due to graphics limitations. This could of course be improved upon.**
 
 ## How to play
 The objective is to finish with your pieces as far Northwest as possible on the game board. Points are awarded for pieces in the goal area.

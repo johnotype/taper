@@ -1,0 +1,12 @@
+WINDOW_WIDTH = 720
+WINDOW_HEIGHT = 720
+
+VIRTUAL_WIDTH = 288
+VIRTUAL_HEIGHT = 288
+
+MYSTERIOUS_SCALING_FACTOR = 0.2
+
+TILE_IDS = {
+    ['regular'] = {1},
+    ['scoring'] = {2}
+}
