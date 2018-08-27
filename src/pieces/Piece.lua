@@ -16,6 +16,10 @@ function Piece:init(width, height, x_pos, y_pos)
     self.visible = true
 end
 
+function Piece:interact()
+    -- implemented in the child classes 
+end
+
 function Piece:update(dt)
 
 end

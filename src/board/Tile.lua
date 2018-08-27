@@ -19,6 +19,24 @@ function Tile:init(x, y, x_pos, y_pos, tile_width, tile_height, id)
     self.mouse_over = false
 end
 
+function Tile:removePiece(index)
+    self.pieces = self.pieces - 1
+    return table.remove(self.contains[index])
+end
+
+function Tile:addPiece(piece)
+    self.pieces = self.pieces + 1
+    table.insert(self.contains, piece)
+end
+
+function Tile:interact(turn)
+    if self.pieces > 0 then
+        for j = 1, self.pieces do
+            self.contains[j]:interact()
+        end
+    end
+end
+
 function Tile:update(dt)
     if (love.mouse.getX() * MYSTERIOUS_SCALING_FACTOR > self.x_pos and love.mouse.getX() * MYSTERIOUS_SCALING_FACTOR < self.x_pos + self.width) then
         if (love.mouse.getY() * MYSTERIOUS_SCALING_FACTOR > self.y_pos and love.mouse.getY() * MYSTERIOUS_SCALING_FACTOR < self.y_pos + self.height) then
@@ -55,5 +73,4 @@ function Tile:render()
 
     love.graphics.setColor(self.red, self.green, self.blue, self.opacity)
     love.graphics.rectangle('fill', self.x_pos, self.y_pos, self.width, self.height) 
-
 end

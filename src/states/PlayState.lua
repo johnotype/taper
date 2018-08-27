@@ -20,14 +20,9 @@ function PlayState:update(dt)
 end
 
 function PlayState:enter(params)
-    -- TODO: Intro
+
 end
 
 function PlayState:render()
     self.board:render()
-    
-    love.graphics.setFont(gFonts['small'])
-    love.graphics.setColor(255,255,255,255)
-    love.graphics.print('y: ' .. love.mouse.getY() * 0.2, 5, 0)
-
 end
